@@ -12,3 +12,13 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+
+
+function thirdFunction() {
+  const ulGallery = document.querySelector('.gallery')
+  const cards = images.map(item => `<li style="display:'flex'; flex-direction:column;"><img src=${item.url} alt=${item.alt}/></li>`).join("");
+  ulGallery.insertAdjacentHTML("afterbegin", cards)
+}
+
+thirdFunction()
